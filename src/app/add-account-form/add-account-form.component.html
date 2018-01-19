@@ -1,0 +1,37 @@
+
+
+<h2>Add an existing Account</h2>
+
+ <form  #f="ngForm" (ngSubmit)="submit(f)">
+
+    <div class="input-group">      
+      <span class="input-group-addon">ID</span>
+      <input id="bankID" type="text" class="form-control" name="bankID" [(ngModel)]="submissions.bankID" 
+         placeholder="Bank ID">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon">ID</span>
+      <input id="accountID" type="text" class="form-control" name="accountID" [(ngModel)]="submissions.accountID"
+       placeholder="Account No">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input id="userName" type="text" class="form-control" name="userName" [(ngModel)]="submissions.userName"
+       placeholder="User Name">
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input id="password" type="password" class="form-control" name="password" [(ngModel)]="submissions.password"
+       placeholder="Password">
+    </div>
+    
+    <br>
+    <div class="col-sm-offset-0 col-sm-10">
+      <button class="btn btn-primary">Submit</button>  {{msg}}
+    </div>
+  
+</form>
+

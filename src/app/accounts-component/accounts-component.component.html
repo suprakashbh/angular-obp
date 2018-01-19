@@ -1,0 +1,30 @@
+
+ 
+
+<h2>Open Banking Plateform - UI</h2>
+  <p>Account Balance</p>
+
+<table class="table table-striped">
+ <thead>
+    <tr>
+      <th>#</th>
+      <th>Bank</th> 
+      <th>Account No</th> 
+      <th>Balance</th> 
+     
+  </tr>
+ </thead>
+ <tbody>
+  <tr *ngFor="let accBal of accountBalance; let i = index">
+      <td >{{i + 1}}</td>
+      <td >{{accBal.bankID}}</td>
+      <td  >{{accBal.accountNo}}</td>  
+      <td >{{accBal.accountBalance}}</td>  
+      <td><a href="#" class="confirm-delete btn mini red-stripe" role="button">Delete</a></td>    
+  </tr>
+ </tbody>
+</table>
+
+<div class="col-sm-offset-0 col-sm-10">
+  <button class="btn btn-primary" (click)="refreshAccountData()">Refresh</button>
+</div>
